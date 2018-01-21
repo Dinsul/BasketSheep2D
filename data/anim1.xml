@@ -1,0 +1,9 @@
+<!DOCTYPE SpriteDecomposer>
+<sprites image="dragon0.png" transparentColor="">
+ <animation title="1" delay="150">
+  <cut w="90" x="175" y="0" h="72" row="1" col="1"/>
+  <cut w="90" x="175" y="79" h="49" row="1" col="1"/>
+  <cut w="90" x="175" y="175" h="64" row="1" col="1"/>
+  <cut w="90" x="175" y="259" h="50" row="1" col="1"/>
+ </animation>
+</sprites>

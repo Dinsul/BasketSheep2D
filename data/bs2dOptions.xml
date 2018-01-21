@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Options>
+    <Main>
+        <parameter name="gameSpeed" value="100" />
+        <parameter name="sheepCount" value="10" />
+        <parameter name="timeToDraw" value="50" />
+        <parameter name="timeToUpdate" value="200" />
+        <parameter name="timeToGenerate" value="2000" />
+        <parameter name="timeToEnd" value="60000" />
+        <parameter name="scoreToEnd" value="10" />
+        <parameter name="playerSpeed" value="2" />
+        <parameter name="sheepSpeed" value="5" />
+        <parameter name="rotateAngle" value="45" />
+    </Main>
+</Options>
