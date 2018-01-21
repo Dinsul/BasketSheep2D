@@ -1,6 +1,6 @@
-#include "randomnix.h"
+#include "myrandom.h"
 
-RandomNix::RandomNix()
+MyRandom::MyRandom()
 {
     _devRandom = fopen(URANDOM_PATH, "r");
 
@@ -10,12 +10,12 @@ RandomNix::RandomNix()
     }
 }
 
-RandomNix::~RandomNix()
+MyRandom::~MyRandom()
 {
     fclose(_devRandom);
 }
 
-int RandomNix::getRandom()
+int MyRandom::getRandom()
 {
     int retVal;
 
@@ -24,7 +24,7 @@ int RandomNix::getRandom()
     return retVal;
 }
 
-int RandomNix::getRandomS()
+int MyRandom::getRandomS()
 {
     FILE *devRandom;
     int retVal;

@@ -1,15 +1,15 @@
-#ifndef RANDOMNIX_H
-#define RANDOMNIX_H
+#ifndef MyRandom_H
+#define MyRandom_H
 
 #include <cstdio>
 
 #define URANDOM_PATH "/dev/urandom"
 
-class RandomNix
+class MyRandom
 {
 public:
-    RandomNix();
-    ~RandomNix();
+    MyRandom();
+    ~MyRandom();
 
     int getRandom();
 
@@ -19,4 +19,4 @@ private:
     FILE *_devRandom;
 };
 
-#endif // RANDOMNIX_H
+#endif // MyRandom_H

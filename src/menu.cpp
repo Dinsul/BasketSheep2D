@@ -92,7 +92,7 @@ void BS2D::Menu::_doDraw(void)
     textName.setFont(font);
     textValue.setFont(font);
 
-    textName.setColor(sf::Color::Magenta);
+    textName.setFillColor(sf::Color::Magenta);
     textName.setPosition(100, 300);
     textName.setCharacterSize(fontSize);
     textName.setString(sf::String(_currentItem->name()));
@@ -123,7 +123,7 @@ void BS2D::Menu::_doDraw(void)
         }
     }
 
-    textValue.setColor(sf::Color::Magenta);
+    textValue.setFillColor(sf::Color::Magenta);
     textValue.setPosition(500, 300);
     textValue.setCharacterSize(fontSize);
     textValue.setString(string);
@@ -132,8 +132,8 @@ void BS2D::Menu::_doDraw(void)
     _window->draw(textName);
     _window->draw(textValue);
 
-    textName.setColor(sf::Color::White);
-    textValue.setColor(sf::Color::White);
+    textName.setFillColor(sf::Color::White);
+    textValue.setFillColor(sf::Color::White);
 
     for (node = _currentItem->next, fontInc = 1; node; node = node->next, ++fontInc)
     {
@@ -233,6 +233,8 @@ void BS2D::Menu::_getControlEvent()
                 {
                 case BS2D::NT_INT:
                     ((MenuNodeInt *)_currentItem)->chengeValue(atoi(_inputString));
+                    break;
+                case BS2D::NT_SMENU:
                     break;
                 default:
                     break;
@@ -388,6 +390,7 @@ void BS2D::MenuNodeInt::chengeValue(int newValue)
 }
 
 BS2D::MenuNodeSM::MenuNodeSM(BS2D::MenuNode *pointer, const char *name, BS2D::Action action)
+    : BS2D::MenuNode(name, action)
 {
     _type    = BS2D::NT_SMENU;
     _subMenu = pointer;

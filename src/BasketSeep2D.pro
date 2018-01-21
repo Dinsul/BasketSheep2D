@@ -9,7 +9,7 @@ HEADERS += \
     game.h \
     options.h \
     units/mobileunit.h \
-    randomnix.h \
+    myrandom.h \
     menu.h
 
 SOURCES += main.cpp \
@@ -18,7 +18,7 @@ SOURCES += main.cpp \
     options.cpp \
     units/mobileunit.cpp \
     controlhandler.cpp \
-    randomnix.cpp \
+    myrandom.cpp \
     menu.cpp
 
 include(deployment.pri)
@@ -46,3 +46,7 @@ mac: LIBS += -L/usr/local/Cellar/tinyxml/2.6.2/lib -ltinyxml
 
 INCLUDEPATH += /usr/local/Cellar/tinyxml2/2.6.2/include
 DEPENDPATH  += /usr/local/Cellar/tinyxml2/2.6.2/include
+
+DISTFILES += \
+    ../README.md \
+    ../Change.log

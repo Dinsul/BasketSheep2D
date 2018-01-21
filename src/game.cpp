@@ -10,7 +10,7 @@
 
 #include "game.h"
 #include "options.h"
-#include "randomnix.h"
+#include "myrandom.h"
 
 Game::Game(sf::RenderWindow *window, BS2D::Options *options)
 {
@@ -77,7 +77,7 @@ void Game::run()
                         || ((BS2D::MobileUnit *)*sheep)->position().x > _mapWidth
                         || ((BS2D::MobileUnit *)*sheep)->position().y > _mapHeight)
                 {
-                    int angle = RandomNix::getRandomS() % 360;
+                    int angle = MyRandom::getRandomS() % 360;
                     angle -= angle % BS2D::ROTATE_ANGLE;
 
                     if (angle == ((BS2D::MobileUnit *)*sheep)->direction())
@@ -111,7 +111,7 @@ void Game::run()
                         || _players[i]->position().x > _mapWidth
                         || _players[i]->position().y > _mapHeight)
                 {
-                    int angle = RandomNix::getRandomS() % 360;
+                    int angle = MyRandom::getRandomS() % 360;
                     angle -= angle % BS2D::ROTATE_ANGLE;
 
                     if (angle == _players[i]->direction())
@@ -221,7 +221,7 @@ void Game::_sheepGenerator()
         BS2D::MobileUnit *sheep;
         sf::Vector2f      pos;
         int               angle;
-        RandomNix         randomizer;
+        MyRandom         randomizer;
 
         pos.x = (float)(_mapMinX + abs(randomizer.getRandom() % _mapWidth));
         pos.y = (float)(_mapMinY + abs(randomizer.getRandom() % _mapHeight));
@@ -239,7 +239,7 @@ void Game::_sheepGenerator()
 
 void Game::_mapGenerator()
 {
-    RandomNix randomizer;
+    MyRandom randomizer;
     char      filename[255];
     int       nestX, nestY;
 

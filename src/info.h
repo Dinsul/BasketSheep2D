@@ -4,7 +4,7 @@
 namespace BS2D {
 
 static int majorVersion = 0;
-static int minorVersion = 1;
+static int minorVersion = 2;
 
 }
 

@@ -29,7 +29,6 @@ public:
     const char *name() const;
     NodeType    type() const;
 
-
     MenuNode *next;
     MenuNode *previous;
 
@@ -67,7 +66,6 @@ public:
     Menu(sf::RenderWindow *window, Options *options);
     ~Menu();
 
-
     bool menuLoop(void);
 
 private:
@@ -100,6 +98,6 @@ private:
 
 };
 
-}
+} // BS2D
 
 #endif // MENU_H
