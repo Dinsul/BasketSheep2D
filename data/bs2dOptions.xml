@@ -2,11 +2,11 @@
 <Options>
     <Main>
         <parameter name="gameSpeed" value="100" />
-        <parameter name="sheepCount" value="10" />
-        <parameter name="timeToDraw" value="50" />
+        <parameter name="sheepCount" value="1" />
+        <parameter name="timeToDraw" value="150" />
         <parameter name="timeToUpdate" value="200" />
         <parameter name="timeToGenerate" value="2000" />
-        <parameter name="timeToEnd" value="60000" />
+        <parameter name="timeToEnd" value="6000000" />
         <parameter name="scoreToEnd" value="10" />
         <parameter name="playerSpeed" value="2" />
         <parameter name="sheepSpeed" value="5" />

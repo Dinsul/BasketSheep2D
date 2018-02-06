@@ -92,7 +92,7 @@ void BS2D::Menu::_doDraw(void)
     textName.setFont(font);
     textValue.setFont(font);
 
-    textName.setFillColor(sf::Color::Magenta);
+    textName.setColor(sf::Color::Magenta);
     textName.setPosition(100, 300);
     textName.setCharacterSize(fontSize);
     textName.setString(sf::String(_currentItem->name()));
@@ -123,7 +123,7 @@ void BS2D::Menu::_doDraw(void)
         }
     }
 
-    textValue.setFillColor(sf::Color::Magenta);
+    textValue.setColor(sf::Color::Magenta);
     textValue.setPosition(500, 300);
     textValue.setCharacterSize(fontSize);
     textValue.setString(string);
@@ -132,8 +132,8 @@ void BS2D::Menu::_doDraw(void)
     _window->draw(textName);
     _window->draw(textValue);
 
-    textName.setFillColor(sf::Color::White);
-    textValue.setFillColor(sf::Color::White);
+    textName.setColor(sf::Color::White);
+    textValue.setColor(sf::Color::White);
 
     for (node = _currentItem->next, fontInc = 1; node; node = node->next, ++fontInc)
     {

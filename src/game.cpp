@@ -331,7 +331,7 @@ void Game::_drawPauseScreen()
 
     text.setFont(font);
     text.setCharacterSize(25);
-    text.setFillColor(sf::Color::White);
+    text.setColor(sf::Color::White);
     text.setPosition(_mapWidth / 2, _mapHeight / 2);
     text.setString(string);
 
@@ -350,7 +350,7 @@ void Game::_drawStatus()
 
     text.setFont(font);
     text.setCharacterSize(15);
-    text.setFillColor(sf::Color::Magenta);
+    text.setColor(sf::Color::Magenta);
 
     text.setPosition(20, 20);
 

@@ -18,19 +18,19 @@ BS2D::Animation::Animation(const char *imagePath, BS2D::ScanDirection scanDirect
 
     switch (scanDirection)
     {
-    case SD_HORIZONT_UD:
+    case SD_VERTICAL_UD:
         rect.left      = (width  > 0) ? (lineInSpriteset - 1) * width : lineInSpriteset * (-width);
         rect.top       = (height > 0) ? (firstFrame - 1) * height     : firstFrame * (-height);
         break;
-    case SD_HORIZONT_DU:
+    case SD_VERTICAL_DU:
         rect.left      = (width > 0)  ? (lineInSpriteset - 1) * width : lineInSpriteset * (-width);
         rect.top       = (height > 0) ? (framesCount + firstFrame - 2) * height : (framesCount + firstFrame - 1) * (-height);
         break;
-    case SD_VERTICAL_LR:
+    case SD_HORIZONT_LR:
         rect.top       = (height > 0) ? (lineInSpriteset - 1) * height : lineInSpriteset * (-height);
         rect.left      = (width >  0) ? (firstFrame - 1) * width       : firstFrame * (-width);
         break;
-    case SD_VERTICAL_RL:
+    case SD_HORIZONT_RL:
         rect.top       = (height > 0) ? (lineInSpriteset - 1) * height : lineInSpriteset * (-height);
         rect.left      = (width > 0)  ? (framesCount + firstFrame - 2) * width : (framesCount + firstFrame - 1) * (-width);
         break;
@@ -42,18 +42,18 @@ BS2D::Animation::Animation(const char *imagePath, BS2D::ScanDirection scanDirect
     {
         switch (scanDirection)
         {
-        case SD_HORIZONT_UD:
+        case SD_VERTICAL_UD:
             rect.top      = i * ((height > 0) ? height : (-height));
             break;
-        case SD_HORIZONT_DU:
-#error TODO reverse filling
-//            rect.top      = i * ((height > 0) ? height : (-height));
+        case SD_VERTICAL_DU:
+//#error TODO reverse filling
+            rect.top      = (framesCount - i - 1) * ((height > 0) ? height : (-height));
             break;
-        case SD_VERTICAL_LR:
+        case SD_HORIZONT_LR:
             rect.left     = i * ((width  > 0) ? width : (-width));
             break;
-        case SD_VERTICAL_RL:
-//            rect.left     = i * ((width  > 0) ? width : (-width));
+        case SD_HORIZONT_RL:
+            rect.left     = (framesCount - i - 1) * ((width  > 0) ? width : (-width));
             break;
         default:
             break;

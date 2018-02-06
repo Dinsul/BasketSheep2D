@@ -13,6 +13,7 @@ class RenderWindow;
 }
 
 namespace BS2D {
+class Animation;
 
 sf::Vector2f rotateVector(sf::Vector2f vector, double angle);
 sf::Vector2f movePoint(sf::Vector2f *point, int direction, int distance);
@@ -78,6 +79,8 @@ protected:
     sf::IntRect   _rect;
     sf::IntRect   _hylicRect;
     int           _zPosition;
+
+    std::vector<Animation*> _animations;
 };
 
 } //namespace BS2D

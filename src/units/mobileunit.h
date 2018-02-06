@@ -6,11 +6,14 @@
 
 namespace BS2D {
 
+class Animation;
+
 class MobileUnit : public Unit
 {
 public:
 
     MobileUnit(sf::Vector2f startPosition, int width, int height, int zPosition, sf::String texturePath, int maxFrame);
+    ~MobileUnit();
 
     ///
     /// \brief move
@@ -53,11 +56,12 @@ public:
     void incrementDirection(int value);
     void incrementSpeed(int value);
     void stepBack(void);
+    void draw(sf::RenderWindow *window);
 
 protected:
     int _speed;
     int _direction;
-    int _currentFrame;
+    int _currentDirection;
     int _maxFrame;
     int _rectWidth;
     int _rectHeight;

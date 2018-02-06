@@ -10,7 +10,8 @@ HEADERS += \
     options.h \
     units/mobileunit.h \
     myrandom.h \
-    menu.h
+    menu.h \
+    animation.h
 
 SOURCES += main.cpp \
     units/unit.cpp \
@@ -19,7 +20,8 @@ SOURCES += main.cpp \
     units/mobileunit.cpp \
     controlhandler.cpp \
     myrandom.cpp \
-    menu.cpp
+    menu.cpp \
+    animation.cpp
 
 include(deployment.pri)
 qtcAddDeployment()
@@ -44,8 +46,8 @@ DEPENDPATH  += /usr/local/include/
 
 mac: LIBS += -L/usr/local/Cellar/tinyxml/2.6.2/lib -ltinyxml
 
-INCLUDEPATH += /usr/local/Cellar/tinyxml2/2.6.2/include
-DEPENDPATH  += /usr/local/Cellar/tinyxml2/2.6.2/include
+mac: INCLUDEPATH += /usr/local/Cellar/tinyxml2/2.6.2/include
+mac: DEPENDPATH  += /usr/local/Cellar/tinyxml2/2.6.2/include
 
 DISTFILES += \
     ../README.md \

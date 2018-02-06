@@ -5,7 +5,7 @@
 
 namespace BS2D {
 
-enum ScanDirection {SD_HORIZONT_UD, SD_HORIZONT_DU, SD_VERTICAL_LR, SD_VERTICAL_RL};
+enum ScanDirection {SD_VERTICAL_UD, SD_VERTICAL_DU, SD_HORIZONT_LR, SD_HORIZONT_RL};
 
 class Animation
 {
